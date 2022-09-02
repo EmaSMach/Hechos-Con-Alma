@@ -28,7 +28,7 @@ psycopg2-binary==2.9.3
 pyparsing==3.0.9
 python-decouple==3.6
 pytz==2022.2.1
-redis==4.3.4
+# redis==4.3.4
 six==1.16.0
 sqlparse==0.4.2
 tzdata==2022.1
