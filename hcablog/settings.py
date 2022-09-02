@@ -153,8 +153,6 @@ LOGOUT_REDIRECT_URL = 'home'
 # }
 
 ALLOWED_HOSTS = ['*']
-    # DATABASE_URL = os.getenv('DATABASE_URL', None)
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'local')
 if ENVIRONMENT != 'production':
