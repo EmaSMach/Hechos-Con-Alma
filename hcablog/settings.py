@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'crispy_forms',
     # 'celery',
-    'decouple',
+    # 'decouple',
     # "secretballot",
     # "likes",
 ]
@@ -148,9 +148,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-SECRETBALLOT_FOR_MODELS = {
-    'blog.post': {},
-}
+# SECRETBALLOT_FOR_MODELS = {
+#     'blog.post': {},
+# }
 
 ALLOWED_HOSTS = ['*']
     # DATABASE_URL = os.getenv('DATABASE_URL', None)
