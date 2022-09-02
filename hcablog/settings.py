@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     # 'celery',
     'decouple',
-    "secretballot",
-    "likes",
+    # "secretballot",
+    # "likes",
 ]
 
 MIDDLEWARE = [
@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'likes.middleware.SecretBallotUserIpUseragentMiddleware',
+    # 'likes.middleware.SecretBallotUserIpUseragentMiddleware',
 ]
 
 ROOT_URLCONF = 'hcablog.urls'
