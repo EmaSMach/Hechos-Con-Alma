@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'blog',
     'ckeditor',
     'crispy_forms',
-    'celery',
+    # 'celery',
     'decouple',
     "secretballot",
 ]
