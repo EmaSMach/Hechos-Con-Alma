@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # 'celery',
     'decouple',
     "secretballot",
+    "likes",
 ]
 
 MIDDLEWARE = [
