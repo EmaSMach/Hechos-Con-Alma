@@ -152,16 +152,20 @@ SECRETBALLOT_FOR_MODELS = {
     'blog.post': {},
 }
 
-ENVIRONMENT = os.getenv('ENVIRONMENT', 'local')
-if ENVIRONMENT == 'production':
-    ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
     # DATABASE_URL = os.getenv('DATABASE_URL', None)
-    # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# ENVIRONMENT = os.getenv('ENVIRONMENT', 'local')
+# if ENVIRONMENT == 'production':
+#     ALLOWED_HOSTS = ['*']
+#     # DATABASE_URL = os.getenv('DATABASE_URL', None)
+#     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
     # DATABASES['default'] = DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
 
-    DATABASE_URL = os.getenv('DATABASE_URL', None)
+    # DATABASE_URL = os.getenv('DATABASE_URL', None)
     # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
+    # DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
     # DATABASES = {
     #     'default': {
     #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -172,5 +176,5 @@ if ENVIRONMENT == 'production':
     #         'PORT': '5432',
     #         }
     #     }
-print(ENVIRONMENT)
+# print(ENVIRONMENT)
 print(DATABASES)
