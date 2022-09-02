@@ -154,27 +154,9 @@ LOGOUT_REDIRECT_URL = 'home'
 
 ALLOWED_HOSTS = ['*']
     # DATABASE_URL = os.getenv('DATABASE_URL', None)
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
-# ENVIRONMENT = os.getenv('ENVIRONMENT', 'local')
-# if ENVIRONMENT == 'production':
-#     ALLOWED_HOSTS = ['*']
-#     # DATABASE_URL = os.getenv('DATABASE_URL', None)
-#     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    # DATABASES['default'] = DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
-
-    # DATABASE_URL = os.getenv('DATABASE_URL', None)
-    # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    # DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #         'NAME': 'dfnoc6irvn9u2l',
-    #         'USER': 'rsuhvmwnjoorre',
-    #         'PASSWORD': '96ecc96cd40f1b46480a7be452234be99f5a5b9fca179f5170a7afa1e052b903',
-    #         'HOST': 'ec2-23-20-140-229.compute-1.amazonaws.com',
-    #         'PORT': '5432',
-    #         }
-    #     }
-# print(ENVIRONMENT)
-print(DATABASES)
+ENVIRONMENT = os.getenv('ENVIRONMENT', 'local')
+if ENVIRONMENT != 'production':
+    ALLOWED_HOSTS = ['*']
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
